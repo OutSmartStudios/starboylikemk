@@ -16,14 +16,16 @@
   --font-logo: 'Bringthanoize';
   --font-headings: "Archivo Black", sans-serif;
 
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
-  --step-xs: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+
   --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
-  --step-1: clamp(1.2rem, 1.0378rem + 0.8109vw, 1.6663rem);
-  --step-2: clamp(1.44rem, 1.1683rem + 1.3585vw, 2.2211rem);
-  --step-3: clamp(1.728rem, 1.2992rem + 2.1439vw, 2.9607rem);
-  --step-4: clamp(2.0736rem, 1.4221rem + 3.2575vw, 3.9467rem);
-  --step-5: clamp(2.4883rem, 1.5239rem + 4.8219vw, 5.2609rem);
+  --step-1: clamp(1.25rem, 1.1052rem + 0.7239vw, 1.6663rem);
+  --step-2: clamp(1.5625rem, 1.3334rem + 1.1454vw, 2.2211rem);
+  --step-3: clamp(1.9531rem, 1.6026rem + 1.7524vw, 2.9607rem);
+  --step-4: clamp(2.4414rem, 1.9178rem + 2.6178vw, 3.9467rem);
+  --step-5: clamp(3.0518rem, 2.2834rem + 3.842vw, 5.2609rem);
+
 
   /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
@@ -52,15 +54,20 @@ body {
   background-color: rgb(51, 152, 253);
   color: var(--color-text);
   font-family: var(--font-headings);
+
+  background-image: url('/images/background-mob.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
 }
 
 main {
+  height: 50vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 30vh;
-
 }
 
 .wrapper {
@@ -71,10 +78,12 @@ main {
   position: relative;
 }
 
+
+
 h1 {
   font-family: var(--font-logo);
   color: var(--color-main);
-  font-size: var(--step-4);
+  font-size: var(--step-3);
   letter-spacing: 3px;
 }
 
@@ -82,13 +91,14 @@ h1 {
   font-family: var(--font-headings);
   text-align: center;
   font-size: var(--step-3);
-  line-height: 0.8;
+  line-height: 0.9;
   font-weight: 200;
 }
 
 
 .font-xl {
   font-size: var(--step-5);
+  letter-spacing: -5px;
 }
 
 .font-xs {
@@ -112,10 +122,6 @@ button {
 }
 
 .hero-background {
-  background-image: url('/images/background-mob.png');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   min-height: 100vh;
  
 }
@@ -125,6 +131,8 @@ button {
   background-size: cover;
   background-position: center;
 }
+
+
 
 
 .grid {
@@ -155,10 +163,10 @@ button {
 }
 nav {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: var(--space-s);
+  padding: var(--space-s) var(--space-m);
   gap: var(--space-s);
 }
 
@@ -167,4 +175,25 @@ ul {
   padding: 0;
   display: flex;
   gap: var(--space-xs-s);
+  height: 35px;
+}
+
+@media (min-width:768px ) {
+  body {
+    background-image: url('/images/background.png');
+  }
+  main {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .cta {
+    margin-right: var(--space-3xl);
+  }
+}
+
+@media (min-width: 600px ) {
+ nav {
+  justify-content: space-between;
+ }
+ 
 }

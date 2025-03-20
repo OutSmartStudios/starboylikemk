@@ -10,29 +10,31 @@ export default function Home() {
           <h1>Starboylikemk</h1>
         </div>
         <ul>
-          <li><a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf" target="_blank"><img src="./icons/spotify.svg"/></a></li>
-          <li><a href="https://www.twitter.com" target="_blank"><img src="./icons/tiktok.svg"/></a></li>
-          <li><a href="https://www.instagram.com" target="_blank"><img src="./icons/instagram.svg"/></a></li>
-          <li><a href="https://www.linkedin.com" target="_blank"><img src="./icons/youtube.svg"/></a></li>
-          <li><a href="https://www.linkedin.com" target="_blank"><img src="./icons/soundcloud.svg"/></a></li>
+          <li><a href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ" target="_blank"><img src="./icons/youtube.svg" height={30} width={30}/></a></li>
+          <li><a href="https://www.tiktok.com/@starboylikemk" target="_blank"><img src="./icons/tiktok.svg" height={30} width={30}/></a></li>
+          <li><a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf" target="_blank"><img src="./icons/spotify.svg" height={30} width={30}/></a></li>
+          <li><a href="https://www.instagram.com/starboylikemk/" target="_blank"><img src="./icons/instagram.svg" height={30} width={30}/></a></li>
+          <li><a href="https://soundcloud.com/starboylikemk" target="_blank"><img src="./icons/soundcloud.svg" height={30} width={30}/></a></li>
       </ul>
       </nav>
     </header>
     <main className="wrapper">
-        <h2 className="h2">ONETIMEAGAIN</h2>
-        <p className="h2 font-xl">OUT NOW</p>
-        <div className="button-wrapper">
-        <button>
-          <img src="./images/listen-now-button.svg" alt="Listen now Button"/>
-        </button>
-        <button>
-          <img src="./images/watch-now-button.svg" alt="Watch the Video Button"/>
-        </button>
+        <div className="cta">
+          <h2 className="h2">OneTimeAgain</h2>
+          <p className="h2 font-xl">OUT NOW</p>
+          <div className="button-wrapper">
+          <button>
+            <img src="./images/listen-now-button.svg" alt="Listen now Button"/>
+          </button>
+          <button>
+            <img src="./images/watch-now-button.svg" alt="Watch the Video Button"/>
+          </button>
+        </div>
       </div>
     </main>
     </div>
 
-    <div className="background">
+    <div>
     <section className="wrapper flow">
       <h2 className="h2 top">MORE MUSIC</h2>
       <div className="grid" data-layout="50-50">
