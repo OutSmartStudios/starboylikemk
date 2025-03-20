@@ -3,17 +3,19 @@
 
 @font-face {
   font-family: 'Bringthanoize';
-  src: url('/fonts/bring_tha_noize/BRINGTHANOIZE.ttf') format('truetype');
+  src: url('/fonts/bring_tha_noize/Bringthanoize.woff2') format('woff2'),
+      url('/fonts/bring_tha_noize/Bringthanoize.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
 
+
 :root {
   --color-main: #EC5701;
   --color-text: #ffffff;
 
-  --font-logo: 'Bringthanoize';
+  --font-logo: 'Bringthanoize', sans-serif;
   --font-headings: "Archivo Black", sans-serif;
 
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -188,6 +190,7 @@ ul {
   .cta {
     margin-right: var(--space-3xl);
   }
+  
 }
 
 @media (min-width: 600px ) {
