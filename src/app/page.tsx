@@ -1,4 +1,5 @@
 import SongCard from "./components/SongCard";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -10,11 +11,11 @@ export default function Home() {
           <h1>Starboylikemk</h1>
         </div>
         <ul>
-          <li><a href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ" target="_blank"><img src="./icons/youtube.svg" height={30} width={30}/></a></li>
-          <li><a href="https://www.tiktok.com/@starboylikemk" target="_blank"><img src="./icons/tiktok.svg" height={30} width={30}/></a></li>
-          <li><a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf" target="_blank"><img src="./icons/spotify.svg" height={30} width={30}/></a></li>
-          <li><a href="https://www.instagram.com/starboylikemk/" target="_blank"><img src="./icons/instagram.svg" height={30} width={30}/></a></li>
-          <li><a href="https://soundcloud.com/starboylikemk" target="_blank"><img src="./icons/soundcloud.svg" height={30} width={30}/></a></li>
+          <li><a href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ" target="_blank"><Image src="./icons/youtube.svg" height={30} width={30} alt="Youtube"/></a></li>
+          <li><a href="https://www.tiktok.com/@starboylikemk" target="_blank"><Image src="./icons/tiktok.svg" height={30} width={30} alt="Tiktok"/></a></li>
+          <li><a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf" target="_blank"><Image src="./icons/spotify.svg" height={30} width={30} alt="Spotify"/></a></li>
+          <li><a href="https://www.instagram.com/starboylikemk/" target="_blank"><Image src="./icons/instagram.svg" height={30} width={30} alt="Instagram"/></a></li>
+          <li><a href="https://soundcloud.com/starboylikemk" target="_blank"><Image src="./icons/soundcloud.svg" height={30} width={30} alt="Soundcloud"/></a></li>
       </ul>
       </nav>
     </header>
