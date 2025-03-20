@@ -1,0 +1,170 @@
+@import './_reset.css';
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+@font-face {
+  font-family: 'Bringthanoize';
+  src: url('/fonts/bring_tha_noize/BRINGTHANOIZE.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-main: #EC5701;
+  --color-text: #ffffff;
+
+  --font-logo: 'Bringthanoize';
+  --font-headings: "Archivo Black", sans-serif;
+
+/* @link https://utopia.fyi/type/calculator?c=320,16,1.2,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+  --step-xs: clamp(0.875rem, 0.7446rem + 0.6522vw, 1.25rem);
+  --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --step-1: clamp(1.2rem, 1.0378rem + 0.8109vw, 1.6663rem);
+  --step-2: clamp(1.44rem, 1.1683rem + 1.3585vw, 2.2211rem);
+  --step-3: clamp(1.728rem, 1.2992rem + 2.1439vw, 2.9607rem);
+  --step-4: clamp(2.0736rem, 1.4221rem + 3.2575vw, 3.9467rem);
+  --step-5: clamp(2.4883rem, 1.5239rem + 4.8219vw, 5.2609rem);
+
+  /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+
+  --space-xs: clamp(0.25rem, 0.2283rem + 0.1087vw, 0.3125rem);
+  --space-s: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
+  --space-m: clamp(1.5rem, 1.3696rem + 0.6522vw, 1.875rem);
+  --space-l: clamp(2rem, 1.8261rem + 0.8696vw, 2.5rem);
+  --space-xl: clamp(3rem, 2.7391rem + 1.3043vw, 3.75rem);
+  --space-2xl: clamp(4rem, 3.6522rem + 1.7391vw, 5rem);
+  --space-3xl: clamp(6rem, 5.4783rem + 2.6087vw, 7.5rem);
+
+  /* One-up pairs */
+  --space-xs-s: clamp(0.25rem, -0.0978rem + 1.7391vw, 1.25rem);
+  --space-s-m: clamp(1rem, 0.6957rem + 1.5217vw, 1.875rem);
+  --space-m-l: clamp(1.5rem, 1.1522rem + 1.7391vw, 2.5rem);
+  --space-l-xl: clamp(2rem, 1.3913rem + 3.0435vw, 3.75rem);
+  --space-xl-2xl: clamp(3rem, 2.3043rem + 3.4783vw, 5rem);
+  --space-2xl-3xl: clamp(4rem, 2.7826rem + 6.087vw, 7.5rem);
+
+  /* Custom pairs */
+  --space-s-l: clamp(1rem, 0.4783rem + 2.6087vw, 2.5rem);
+
+}
+
+body {
+  background-color: rgb(51, 152, 253);
+  color: var(--color-text);
+  font-family: var(--font-headings);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+
+}
+
+.wrapper {
+  margin-inline: auto;
+  max-width: var(--wrapper-max-width, 1360px);
+  padding-left: var(--gutter);
+  padding-right: var(--gutter);
+  position: relative;
+}
+
+h1 {
+  font-family: var(--font-logo);
+  color: var(--color-main);
+  font-size: var(--step-4);
+  letter-spacing: 3px;
+}
+
+.h2 {
+  font-family: var(--font-headings);
+  text-align: center;
+  font-size: var(--step-3);
+  line-height: 0.8;
+  font-weight: 200;
+}
+
+
+.font-xl {
+  font-size: var(--step-5);
+}
+
+.font-xs {
+  font-size: var(--step-xs);
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: var(--space-s);
+  gap: var(--space-s-m);
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  color: inherit;
+  white-space: nowrap;
+  line-break: none;
+}
+
+.hero-background {
+  background-image: url('/images/background-mob.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+ 
+}
+
+.background {
+  background-image: url('/images/background2.png');
+  background-size: cover;
+  background-position: center;
+}
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(
+    var(--grid-placement, auto-fill),
+    minmax(var(--grid-min-item-size, 22rem), 1fr)
+  );
+  gap: var(--gutter, 2rem);
+}
+
+.grid[data-layout='50-50'] {
+  --grid-placement: auto-fit;
+  --grid-min-item-size: clamp(16rem, 50vw, 33rem);
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+.card {
+  padding: var(--space-l);
+  justify-self: center;
+}
+
+.top {
+  padding: var(--space-l);
+}
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: var(--space-s);
+  gap: var(--space-s);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: var(--space-xs-s);
+}
