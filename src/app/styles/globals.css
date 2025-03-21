@@ -67,9 +67,10 @@ body {
 body::before {
   content: '';
   position: fixed;
+  display: block;
   top: 0;
   left: 0;
-  min-width: 102vw;
+  width: 100vw;
   min-height: 100svh;
   min-height: 100vh;
   background-image: url('/images/background-mob.png');
@@ -180,22 +181,20 @@ nav {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: var(--space-s) var(--space-l);
+  padding: var(--space-l) var(--space-l);
   gap: var(--space-s);
 }
 
 ul {
   list-style-type: none;
-  padding: 0;
+  padding:0;
+  margin-bottom: var(--space-xs);
   display: flex;
   gap: var(--space-xs-s);
-  height: 35px;
 }
 
 @media (min-width:768px ) {
-  body {
-    background-image: url('/images/background.png');
-  }
+  
   main {
     justify-content: flex-end;
     align-items: flex-end;
@@ -207,20 +206,24 @@ ul {
   
 }
 
-@media (min-width: 600px ) {
+@media (min-width: 630px ) {
  nav {
   justify-content: space-between;
  }
 }
 
 @media (min-width: 480px) {
+  body {
+    background-image: url('/images/background.png');
+  }
+
   body::before {
     content: '';
     position: static;
     top: 0;
     left: 0;
-    width: 102vw;
-    min-height: 100vh;
+    width: auto;
+    min-height: auto;
     background-image: url('/images/background.png');
     z-index: -1;
   }
