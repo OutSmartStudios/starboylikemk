@@ -205,7 +205,16 @@ ul {
     margin-right: var(--space-3xl);
   }
   
-  
+  body::before {
+    content: '';
+    position: static;
+    top: 0;
+    left: 0;
+    min-width: 102vw;
+    min-height: 100vh;
+    background-image: url('/images/background.png');
+    z-index: -1;
+  }
 }
 
 @media (min-width: 600px ) {
@@ -213,15 +222,6 @@ ul {
   justify-content: space-between;
  }
 
- body::before {
-  content: '';
-  position: static;
-  top: 0;
-  left: 0;
-  min-width: 102vw;
-  min-height: 100vh;
-  background-image: url('/images/background.png');
-  z-index: -1;
-}
+ 
  
 }
