@@ -70,6 +70,7 @@ body::before {
   position: fixed;
   top: 0;
   left: 0;
+  min-width: 102vw;
   min-height: 100svh;
   min-height: 100vh;
   background-image: url('/images/background-mob.png');
@@ -217,6 +218,7 @@ ul {
   position: static;
   top: 0;
   left: 0;
+  min-width: 102vw;
   min-height: 100vh;
   background-image: url('/images/background.png');
   z-index: -1;
