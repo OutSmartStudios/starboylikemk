@@ -8,12 +8,12 @@ import { Analytics } from "@vercel/analytics/react"
 const bringThaNoize = bringThaNoizeFont({
   src: [
     {
-      path: "../public/fonts/bring_tha_noize/Bringthanoize.woff2",
+      path: "../../public/fonts/bring_tha_noize/Bringthanoize.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/bring_tha_noize/Bringthanoize.woff",
+      path: "../../public/fonts/bring_tha_noize/Bringthanoize.woff",
       weight: "400",
       style: "normal",
     },
