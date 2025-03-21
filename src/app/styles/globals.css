@@ -55,13 +55,12 @@
 
 html {
   background-color: rgb(254, 254, 254);
+  min-height: 100%;
 }
 
 body {
-  
   color: var(--color-text);
   font-family: var(--font-headings);
-
   background-size: cover;
  
 }
@@ -218,9 +217,7 @@ ul {
 }
 
 @media (min-width: 480px) {
-  /* body {
-    background-image: url('/images/background.png');
-  } */
+  
 
   body::before {
     background-image: url('/images/background.png');
