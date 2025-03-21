@@ -13,13 +13,13 @@ export default function SongCard({img, alt, listenLink, watchLink}:SongCardProps
         <img src={img} alt={alt}/>
         <div className="button-wrapper">
             <button className="font-xs">
-                <a href={listenLink} target="_blank">
+                <a href={listenLink} rel="noopener noreferrer" target="_blank">
                     LISTEN NOW
                 </a>
             </button>
             {watchLink && 
                 <button>
-                    <a href={watchLink} target="_blank">
+                    <a href={watchLink} rel="noopener noreferrer" target="_blank">
                         <img src="./images/watch-now-button.svg"/>
                     </a>
                 </button>

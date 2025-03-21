@@ -11,11 +11,11 @@ export default function Home() {
           <h1>Starboylikemk</h1>
         </div>
         <ul>
-          <li><a href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ" target="_blank"><Image src="./icons/youtube.svg" height={30} width={30} alt="Youtube"/></a></li>
-          <li><a href="https://www.tiktok.com/@starboylikemk" target="_blank"><Image src="./icons/tiktok.svg" height={30} width={30} alt="Tiktok"/></a></li>
-          <li><a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf" target="_blank"><Image src="./icons/spotify.svg" height={30} width={30} alt="Spotify"/></a></li>
-          <li><a href="https://www.instagram.com/starboylikemk/" target="_blank"><Image src="./icons/instagram.svg" height={30} width={30} alt="Instagram"/></a></li>
-          <li><a href="https://soundcloud.com/starboylikemk" target="_blank"><Image src="./icons/soundcloud.svg" height={30} width={30} alt="Soundcloud"/></a></li>
+          <li><a href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ" rel="noopener noreferrer"  target="_blank"><Image src="./icons/youtube.svg" height={30} width={30} alt="Youtube"/></a></li>
+          <li><a href="https://www.tiktok.com/@starboylikemk" rel="noopener noreferrer" target="_blank"><Image src="./icons/tiktok.svg" height={30} width={30} alt="Tiktok"/></a></li>
+          <li><a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf" rel="noopener noreferrer" target="_blank"><Image src="./icons/spotify.svg" height={30} width={30} alt="Spotify"/></a></li>
+          <li><a href="https://www.instagram.com/starboylikemk/" rel="noopener noreferrer" target="_blank"><Image src="./icons/instagram.svg" height={30} width={30} alt="Instagram"/></a></li>
+          <li><a href="https://soundcloud.com/starboylikemk" rel="noopener noreferrer" target="_blank"><Image src="./icons/soundcloud.svg" height={30} width={30} alt="Soundcloud"/></a></li>
       </ul>
       </nav>
     </header>
@@ -26,12 +26,12 @@ export default function Home() {
           <div className="button-wrapper">
 
           <button>
-            <a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf?flow_ctx=da3b2c7e-2b50-473e-af5a-f48104fdc891%3A1742566682#login" target="_blank">
+            <a href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf?flow_ctx=da3b2c7e-2b50-473e-af5a-f48104fdc891%3A1742566682#login" rel="noopener noreferrer" target="_blank">
               <img src="./images/listen-now-button.svg" alt="Listen now Button"/>
             </a>
           </button>
           <button>
-            <a href="https://www.youtube.com/watch?v=LYZvA-f5y5g" target="_blank">
+            <a href="https://www.youtube.com/watch?v=LYZvA-f5y5g" rel="noopener noreferrer" target="_blank">
               <img src="./images/watch-now-button.svg" alt="Watch the Video Button"/>
             </a>
           </button>
