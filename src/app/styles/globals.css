@@ -193,9 +193,9 @@ ul {
 }
 
 @media (min-width:768px ) {
-  /* body {
+  body {
     background-image: url('/images/background.png');
-  } */
+  }
   main {
     justify-content: flex-end;
     align-items: flex-end;
@@ -204,23 +204,24 @@ ul {
     margin-right: var(--space-3xl);
   }
   
-  body::before {
-    content: '';
-    position: static;
-    top: 0;
-    left: 0;
-    min-width: 102vw;
-    min-height: 100vh;
-    background-image: url('/images/background.png');
-    z-index: -1;
-  }
+  
 }
 
 @media (min-width: 600px ) {
  nav {
   justify-content: space-between;
  }
+}
 
- 
- 
+@media (min-width: 480px) {
+  body::before {
+    content: '';
+    position: static;
+    top: 0;
+    left: 0;
+    width: 102vw;
+    min-height: 100vh;
+    background-image: url('/images/background.png');
+    z-index: -1;
+  }
 }
