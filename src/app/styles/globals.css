@@ -136,14 +136,17 @@ a {
   gap: var(--space-s);
 }
 
-button {
+.button {
+  display: inline-flex;
+  align-items: center;
   background-color: transparent;
   border: none;
   color: inherit;
   white-space: nowrap;
   line-break: none;
+  vertical-align: middle;
 }
-button:hover {
+.button:hover {
   color: var(--color-main);
 }
 .hero-background {
