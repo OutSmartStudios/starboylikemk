@@ -54,11 +54,10 @@
 }
 
 body {
-  background-color: rgb(51, 152, 253);
+  background-color: rgb(254, 254, 254);
   color: var(--color-text);
   font-family: var(--font-headings);
 
-  background-image: url('/images/background-mob.png');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -194,9 +193,9 @@ ul {
 }
 
 @media (min-width:768px ) {
-  body {
+  /* body {
     background-image: url('/images/background.png');
-  }
+  } */
   main {
     justify-content: flex-end;
     align-items: flex-end;
