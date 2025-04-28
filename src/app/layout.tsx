@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 
 import "./styles/globals.css";
 import { Analytics } from "@vercel/analytics/react"
@@ -15,7 +15,6 @@ export const metadata: Metadata = {
     icon: "/icons/logo.png",
     apple: "/icons/logo.png",
   },
-  viewport: "width=device-width, initial-scale=1",
   alternates: {
     canonical: "https://starboylikemk.com",
   },
@@ -45,6 +44,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+};
+
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 export default function RootLayout({
