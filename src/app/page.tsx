@@ -83,7 +83,6 @@ export default function Home() {
           title="Play Music">
             <img src="/images/player.svg" alt="Music player image"/>
         </a>
-         
       </div>
 
       
