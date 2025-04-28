@@ -1,5 +1,6 @@
 @import './_reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 @font-face {
   font-family: 'Bringthanoize';
@@ -13,10 +14,16 @@
 
 :root {
   --color-main: #EC5701;
-  --color-text: #ffffff;
+  --color-text: #000000;
+  --color-ms-blue: #2358B8;
+  --color-ms-blue-lt: #659CC6;
+  --color-white: #ffffff;
+  --color-grey: #C6C8CD;
+  ;
 
   --font-logo: 'Bringthanoize', sans-serif;
   --font-headings: "Archivo Black", sans-serif;
+  --font-base: "Instrument Sans", sans-serif;
 
 /* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
@@ -50,7 +57,17 @@
 
   /* Custom pairs */
   --space-s-l: clamp(1rem, 0.4783rem + 2.6087vw, 2.5rem);
+  --space-s-2xl: clamp(1rem, -0.3913rem + 6.9565vw, 5rem);
+  --space-s-3xl: clamp(1rem, -1.2609rem + 11.3043vw, 7.5rem);
 
+}
+
+.myspace-blue {
+  background-color: var(--color-ms-blue);
+}
+
+.myspace-blue-lt {
+  background-color:var(--color-ms-blue-lt)
 }
 
 html {
@@ -60,38 +77,39 @@ html {
 
 body {
   color: var(--color-text);
-  font-family: var(--font-headings);
-  background-size: cover;
- 
+  font-family: var(--font-base);
+  margin: 0 auto;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  display: block;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  min-height: 100svh;
-  min-height: 100vh;
-  background-image: url('/images/background-mob.png');
-  z-index: -1;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+header {
+  color: var(--color-white);
+}
+h1 {
+  padding: var(--space-s) 0;
+  font-size: var(--step-3);
 }
 
-main {
-  height: 50vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+h2 {
+  font-size: var(--step-1);
 }
+.ms-nav {
+  text-align: center;
+  font-size: var(--step-0);
+}
+
+/* .ms-nav ul li:not(:last-child)::after {
+  content:"|";
+} */
+
+.ms-nav-header {
+  font-weight: bold;
+  padding: var(--space-xs);
+}
+
 
 .wrapper {
   margin-inline: auto;
-  max-width: var(--wrapper-max-width, 1360px);
+  max-width: var(--wrapper-max-width, 1440px);
   padding-left: var(--gutter);
   padding-right: var(--gutter);
   position: relative;
@@ -99,7 +117,7 @@ main {
 
 
 
-h1 {
+.graffiti {
   font-family: var(--font-logo);
   color: var(--color-main);
   font-size: var(--step-3);
@@ -107,7 +125,7 @@ h1 {
 }
 
 .h2 {
-  font-family: var(--font-headings);
+  font-family: var(--font-base);
   text-align: center;
   font-size: var(--step-4);
   line-height: 0.9;
@@ -118,6 +136,20 @@ a {
   text-decoration: none;
 }
 
+a:active {
+  color: var(--color-main);
+}
+
+
+
+.latest-music p a {
+  color: var(--color-ms-blue);
+}
+
+
+.font-lt {
+  font-weight: 400;
+}
 
 .font-xl {
   font-size: var(--step-6);
@@ -136,45 +168,19 @@ a {
   gap: var(--space-s);
 }
 
-.button {
-  display: inline-flex;
-  align-items: center;
-  background-color: transparent;
-  border: none;
-  color: inherit;
-  white-space: nowrap;
-  line-break: none;
-  vertical-align: middle;
-}
-.button:hover {
-  color: var(--color-main);
-}
-.hero-background {
-  min-height: 100svh;
-  min-height: 100vh;
-}
-
-.background {
-  background-image: url('/images/background2.png');
-  background-size: cover;
-  background-position: center;
-}
-
-
-
 
 .grid {
   display: grid;
   grid-template-columns: repeat(
     var(--grid-placement, auto-fill),
-    minmax(var(--grid-min-item-size, 22rem), 1fr)
+    minmax(var(--grid-min-item-size, 18rem), 1fr)
   );
   gap: var(--gutter, 2rem);
 }
 
 .grid[data-layout='50-50'] {
   --grid-placement: auto-fit;
-  --grid-min-item-size: clamp(16rem, 50vw, 33rem);
+  --grid-min-item-size: clamp(20rem, 40vw, 33rem);
 }
 
 .flow > * + * {
@@ -189,13 +195,29 @@ a {
 .top {
   padding: var(--space-l);
 }
-nav {
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding: var(--space-l) var(--space-l);
-  gap: var(--space-s);
+}
+
+
+
+.music-entry {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.4rem;
+}
+
+.music-entry h3 {
+  font-weight: 200;
+ 
+}
+
+.margin-bottom {
+  margin-bottom: var(--space-m);
 }
 
 ul {
@@ -206,29 +228,97 @@ ul {
   gap: var(--space-xs-s);
 }
 
-@media (min-width:768px ) {
-  
-  main {
-    justify-content: flex-end;
-    align-items: flex-end;
-  }
-  .cta {
-    margin-right: var(--space-3xl);
-  }
-  
+
+.grey-container {
+  background-color: var(--color-grey);
+  border: 2px solid black;
+  padding: var(--space-s);
   
 }
 
-@media (min-width: 630px ) {
- nav {
-  justify-content: space-between;
- }
+.profile-section {
+  display: flex;
+  flex-direction: column;
 }
 
-@media (min-width: 480px) {
-  
 
-  body::before {
-    background-image: url('/images/background.png');
+.myspace-url {
+  color: var(--color-ms-blue);
+  font-weight: 600;
+}
+
+.myspace-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, auto);
+  column-gap: var(--space-s-2xl);
+  row-gap: var(--space-m);
+  margin: 2rem;
+}
+
+.container a {
+  display: flex;
+  align-items: center;
+  margin:0 0.2rem;
+}
+
+.container {
+  border: 2px solid black;
+}
+
+.div1 { 
+  grid-area: 1 / 1 / 2 / 3; 
+  order: 1;
+}
+.div2 { 
+  grid-area: 2 / 1 / 5 / 3;
+  order: 2
+}
+.div3 { 
+  grid-area: 5 / 1 / 7 / 3; 
+  order: 3;
+}
+.div4 { 
+  grid-area: 7 / 1 / 8 / 3;
+  order: 4;
+}
+.div5 { 
+  grid-area: 1 / 3 / 3 / 6; 
+  order: 5;
+  display: flex;
+}
+.div6 { 
+  grid-area: 3 / 3 / 5 / 6;
+  order: 6;
+  display: flex;
+  flex-direction: column;
+}
+.div7 { 
+  grid-area: 5 / 3 / 7 / 6;
+  order: 7;
+  max-width: 650px;  }
+.div8 { 
+  grid-area: 7 / 4 / 8 / 6; 
+  order: 8;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 786px)  {
+  .myspace-grid {
+    display: flex;
+    flex-direction: column;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: var(--space-s-2xl);
+    row-gap: var(--space-m);
+    margin: 2rem;
+  }
+
+  .div5 {
+    order: 2;
+  }
+  .div8 {
+    justify-content: center;
   }
 }

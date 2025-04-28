@@ -1,36 +1,15 @@
 import type { Metadata } from "next";
-import bringThaNoizeFont from "next/font/local";
-import { Archivo_Black } from "next/font/google";
+
 import "./styles/globals.css";
 import { Analytics } from "@vercel/analytics/react"
 
 
-const bringThaNoize = bringThaNoizeFont({
-  src: [
-    {
-      path: "../../public/fonts/bring_tha_noize/Bringthanoize.woff2",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/bring_tha_noize/Bringthanoize.woff",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  display: "swap",
-});
 
-const archivoBlack = Archivo_Black({
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
-});
 
 
 export const metadata: Metadata = {
   title: "starboylikemk | Official Website",
-  description: "OneTimeAgain OUT NOW!",
+  description: "Myspace OUT NOW!",
   keywords: ["music", "artist", "starboylikemk", "starboylikemk Music"],
   icons: {
     icon: "/icons/logo.png",
@@ -42,7 +21,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: "starboylikemk | Official Website",
-    description: "OneTimeAgain OUT NOW!",
+    description: "Myspace OUT NOW!",
     url: "https://starboylikemk.com", 
     siteName: "starboylikemk",
     images: [
@@ -98,7 +77,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${archivoBlack.className} ${bringThaNoize.className}`}>
+      <body>
         {children}
         <Analytics />
       </body>

@@ -1,115 +1,178 @@
-import SongCard from "./components/SongCard";
+import MSNav from "./components/MSNav"
 import Image from "next/image";
 
+
 export default function Home() {
+  const currentDate = new Date().toLocaleDateString();
   return (
     <>
-    <div className="hero-background">
-    <header>
-      <nav>
-        <div>
-          <h1>Starboylikemk</h1>
-        </div>
-        <ul aria-label="Social Media Navigation">
-          <li>
-            <a
-              href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit our YouTube channel"
-              title="YouTube"
-            >
-              <Image src="/icons/youtube.svg" height={30} width={30} alt="YouTube" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.tiktok.com/@starboylikemk"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit our TikTok profile"
-              title="TikTok"
-            >
-              <Image src="/icons/tiktok.svg" height={30} width={30} alt="TikTok" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Listen on Spotify"
-              title="Spotify"
-            >
-              <Image src="/icons/spotify.svg" height={30} width={30} alt="Spotify" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/starboylikemk/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Visit our Instagram profile"
-              title="Instagram"
-            >
-              <Image src="/icons/instagram.svg" height={30} width={30} alt="Instagram" />
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://soundcloud.com/starboylikemk"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Listen on SoundCloud"
-              title="SoundCloud"
-            >
-              <Image src="/icons/soundcloud.svg" height={30} width={30} alt="SoundCloud" />
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </header>
-    <main className="wrapper">
-        <div className="cta">
-          <h2 className="h2">OneTimeAgain</h2>
-          <p className="h2 font-xl">OUT NOW</p>
-          <div className="button-wrapper">
+    <MSNav/>
+    <div className="flex-center">
+    <main className="myspace-grid flow wrapper" data-layout="50-50">
+      <div className="div1">
+        <h1>Starboy_likeMK</h1>
+      </div>
+      <div className="div2">
+      <article className="profile-section grey-container flow">
+        <p>&quot;if ur tryna feel some come my way &lt;3&quot; </p>
+          <img src="/images/ms-pp.png"  alt="Starboylikemk profile picture" />
+        <p>Last Login: {currentDate} </p>
+      </article>
+      </div>
 
+      
+      <nav className="container div3">
+        <a
+          href="mailto:starboylikemk@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Message via email"
+          title="Message"
+        >
+          <Image src="/icons/message.svg" height={30} width={30} alt="Message" /> <p>Send message</p>
+        </a>
+        <a
+          href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Visit our YouTube channel"
+          title="YouTube"
+        >
+          <Image src="/icons/share.svg" height={30} width={30} alt="YouTube" /> Watch videos
+        </a>
+        <a
+          href="https://soundcloud.com/starboylikemk"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Listen to SoundCloud"
+          title="SoundCloud"
+        >
+          <Image src="/icons/addtofriends.svg" height={30} width={30} alt="SoundCloud" /> New sounds
+        </a>
+        <a
+          href="https://www.instagram.com/starboylikemk/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow on Instagram"
+          title="Instagram"
+        >
+          <Image src="/icons/instagram.svg" height={30} width={30} alt="Instagram" /> Follow on IG
+        </a>
+        <a
+          href="https://www.tiktok.com/@starboylikemk"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Follow on TikTok"
+          title="TikTok"
+        >
+          <Image src="/icons/tiktok.svg" height={30} width={30} alt="TikTok" /> Follow on TT
+        </a>
+      </nav>
+
+      <article className="div4 flow grey-container ">
+        <h2>MySpace URL:</h2>
+        <a className="myspace-url" href="https://www.starboylikemk.com/">https://www.starboylikemk.com/</a>
+      </article>
+
+      <div className="div5 ">
+        <a 
+          href="https://open.spotify.com/album/7Jo6yKInyN3wz0yZTmBW4p?uid=94abd9667c81a62971cf&uri=spotify%3Atrack%3A09LrSEf5G3T5bpGteuN02L"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Play Music"
+          title="Play Music">
+            <img src="/images/player.svg" alt="Music player image"/>
+        </a>
+         
+      </div>
+
+      
+      <article className="div6 flow">
           <a
-            className="button"
-            href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf?flow_ctx=da3b2c7e-2b50-473e-af5a-f48104fdc891%3A1742566682#login"
-            rel="noopener noreferrer"
+            href="https://soundcloud.com/starboylikemk"
             target="_blank"
-            title="Listen on Spotify"
-            aria-label="Listen to song on Spotify"
-          >
-            <img src="./images/listen-now-button.svg" alt="Listen to song on Spotify" />
-          </a>
-          <a
-            className="button"
-            href="https://www.youtube.com/watch?v=LYZvA-f5y5g"
             rel="noopener noreferrer"
-            target="_blank"
-            title="Watch on YouTube"
-            aria-label="Watch the video on YouTube"
-          >
-            <img src="./images/watch-now-button.svg" alt="Watch the Video on YouTube" />
+            aria-label="Latest Music"
+            title="Latest Music">
+            <div className="music-entry">
+              <h2>Starboy_likeMK&apos;s latest</h2>
+              <Image src='/icons/music-cd.svg' width={32} height={32} alt="Soundcloud" />
+            </div>
           </a>
+        
+        <div className="latest-music flow">
+          <div className="music-entry">
+            <h3>MYSPACE</h3>
+            <p>[<a 
+              href="https://open.spotify.com/album/7Jo6yKInyN3wz0yZTmBW4p?uid=94abd9667c81a62971cf&uri=spotify%3Atrack%3A09LrSEf5G3T5bpGteuN02L"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Listen to MYSPACE"
+              title="Listen to MYSPACE">
+                view more</a>]</p>
+          </div>
+          <div className="music-entry">
+            <h3>OneTimeAgain</h3>
+            <p>[<a 
+                href="https://open.spotify.com/track/3QrXYGifSunOG23bWwk5uI"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Listen to OneTimeAgain"
+                title="Listen to OneTimeAgain">
+                  view more</a>]</p>
+          </div>
+          <div className="music-entry">
+            <h3>Wassuppp</h3>
+            <p>[<a 
+              href="https://open.spotify.com/track/534DSaFxUFjJWnFR4C4yLK"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Listen to Wassuppp"
+              title="Listen to Wassuppp">
+               view more</a>]</p>
+          </div>
         </div>
+        
+          <a
+            href="https://open.spotify.com/artist/6RchwmvR0TrucPeYCqvsdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Music"
+            title="Music">
+              <div className="music-entry">
+                <h2>Starboy_likeMK&apos;s music</h2>
+                <Image src='/icons/spotify.svg' width={32} height={32} alt="Spotify" />
+              </div>
+          </a>
+        
+          <a
+            href="https://www.youtube.com/channel/UCjsRVXSbljtu-86l6yJtSgQ"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Videos"
+            title="Videos">
+
+        <div className="music-entry">
+          <h2>Starboy_likeMK&apos; videos</h2>
+          <Image src='/icons/youtube.svg' width={32} height={32} alt="Youtube" />
+        </div>
+        </a>
+      </article>
+
+      <article className="div7">
+        <h2>About me:</h2>
+        <div className="grey-container">
+          <p>17</p>
+          <p>London</p>
+          <p>Artist / Producer / Starboy </p>
+          <p>It&apos;s a starboy world!!</p>
+        </div>
+      </article>
+
+      <div className="div8">
+          <h1 className="graffiti">Starboylikemk</h1>
       </div>
     </main>
-    </div>
-
-    <div>
-    <section className="wrapper flow">
-      <h2 className="h2 top">MORE MUSIC</h2>
-      <div className="grid" data-layout="50-50">
-        <SongCard img="./images/wassupp.png" alt="Wassuppp music single cover" listenLink="https://open.spotify.com/track/534DSaFxUFjJWnFR4C4yLK"/>
-        <SongCard img="./images/wassupp2.png" alt="Wassuppp2 music single cover" listenLink="https://open.spotify.com/album/384kwooGht7JdEtF5Yo0ir"/>
-        <SongCard img="./images/enchante.png" alt="Enchante music single cover" listenLink="https://open.spotify.com/track/36iZVJEDBOuXOD2hCAN6bg"/>
-        <SongCard img="./images/wild.png" alt="Wild music single cover" listenLink="https://open.spotify.com/track/2yqWBTSKCeDx1yn3cO4kaa" watchLink="https://www.youtube.com/watch?v=bUFUnS49x94"/>
-      </div>
-    </section>
     </div>
     </>
   );
