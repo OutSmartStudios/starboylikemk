@@ -81,7 +81,7 @@ export default function Home() {
           rel="noopener noreferrer"
           aria-label="Play Music"
           title="Play Music">
-            <img src="/images/player.svg" alt="Music player image"/>
+            <img src="/images/player.png" alt="Music player image"/>
         </a>
       </div>
 
