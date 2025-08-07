@@ -108,7 +108,7 @@ h1 {
 }
 
 h2 {
-  font-size: var(--step-4);
+  font-size: var(--step-5);
   font-family: var(--font-headings);
   font-weight: 300;
   text-align: center;
@@ -179,6 +179,11 @@ ul {
   padding:0;
   display: flex;
   gap: var(--space-xs-s);
+
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    justify-content: space-evenly;
+  }
 }
 
 .wrapper {
