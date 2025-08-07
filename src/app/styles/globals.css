@@ -177,7 +177,6 @@ nav {
 ul {
   list-style-type: none;
   padding:0;
-  /* margin-bottom: var(--space-xs); */
   display: flex;
   gap: var(--space-xs-s);
 }
