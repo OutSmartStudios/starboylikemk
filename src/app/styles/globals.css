@@ -87,9 +87,6 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  color: var(--color-orange);
-}
 .cream {
   color: var(--color-cream);
 }
@@ -113,9 +110,11 @@ h1 {
   text-align: center;
   padding-bottom: var(--space-s);
 
-  @media screen and (max-width: 600px) {
+  
+}
+@media screen and (max-width: 600px) {
+  h1 {
     font-size: var(--step-5);
-    
   }
 }
 
@@ -126,12 +125,14 @@ h2 {
   text-align: center;
   padding-bottom: var(--space-s);
 
-  @media screen and (max-width: 600px) {
-    font-size: var(--step-4);
-    
-  }
+  
 }
 
+@media screen and (max-width: 600px) {
+  h2 {
+    font-size: var(--step-4);
+  }
+  }
 .album-info {
   display: flex;
   justify-content: space-between;
@@ -156,17 +157,23 @@ h2 {
   max-width: 1000px;
 }
 
+
 .track {
   font-size: var(--step-5);
   font-family: var(--font-base);
   letter-spacing: -3px;
   font-weight: 700;
   line-height: 0.9;
+}
 
-  @media screen and (max-width: 600px) {
+.track a:hover {
+  color: var(--color-orange-drk);
+}
+
+@media screen and (max-width: 600px) {
+  .track {
     font-size: var(--step-4);
     letter-spacing: -2px;
-    
   }
 }
 
@@ -191,8 +198,14 @@ ul {
   padding:0;
   display: flex;
   gap: var(--space-xs-s);
+}
 
-  @media screen and (max-width: 600px) {
+ul li:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  ul {
     width: 250px;
     justify-content: space-evenly;
   }
