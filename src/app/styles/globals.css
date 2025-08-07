@@ -82,7 +82,10 @@ body {
 .drk-orange {
   color: var(--color-orange-drk);
 }
-
+a {
+  color: var(--color-cream);
+  text-decoration: none;
+}
 .cream {
   color: var(--color-cream);
 }

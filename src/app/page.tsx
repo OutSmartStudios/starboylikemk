@@ -9,17 +9,17 @@ export default function Home() {
           <h1 className="h1 cream">STARBOY<span className="drk-orange szn">SZN</span></h1>
           
           <div className="album-info">
-            <p>StarboylikeMK</p>
-            <p>8 august 2025</p>
+            <p>starboylikemk</p>
+            <p>8 August 2025</p>
             <p className="artist">pre save EP now</p>
           </div>
       </header>
       <main>
         <div className="tracklist">
-          <p className="track">1 CocaCrazy&nbsp;</p>
-          <p className="track">2 Wats<span className="lt">Gwaaning</span>&nbsp;</p>
-          <p className="track">3 Talk2MeGirl&nbsp;</p>
-          <p className="track">4 Nyc<span className="lt">Girl</span>&nbsp;</p>
+          <p className="track"><a href="#">1 CocaCrazy&nbsp;</a></p>
+          <p className="track"><a href="#">2 Wats<span className="lt">Gwaaning</span>&nbsp;</a></p>
+          <p className="track"><a href="#">3 Talk2MeGirl&nbsp;</a></p>
+          <p className="track"><a href="#">4 Nyc<span className="lt">Girl</span>&nbsp;</a></p>
         </div>
         <div className="artwork">
           <Image src='/images/cover.jpg' alt="Album Artwork" layout="responsive"
