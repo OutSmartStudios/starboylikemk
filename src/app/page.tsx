@@ -1,4 +1,5 @@
 import Image from "next/image";
+// import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
 
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
         <div className="tracklist">
           <p className="track">1 CocaCrazy&nbsp;</p>
           <p className="track">2 Wats<span className="lt">Gwaaning</span>&nbsp;</p>
-          <p className="track">3 TalkToMeGirl&nbsp;</p>
+          <p className="track">3 Talk2MeGirl&nbsp;</p>
           <p className="track">4 Nyc<span className="lt">Girl</span>&nbsp;</p>
         </div>
         <div className="artwork">
@@ -28,9 +29,12 @@ export default function Home() {
                (max-width: 1200px) 60vw,
                33vw"/>
         </div>
+        <h2 className="h1 cream">starboylike<span className="drk-orange szn">mk</span></h2>
+        {/* <p className="track">1 CocaCrazy&nbsp;</p> */}
+        {/* <VideoPlayer /> */}
       </main>
       <footer>
-        <h2 className="h1 cream">STARBOYLIKE<span className="drk-orange szn">MK</span></h2>
+        
         <nav className="social-nav">
         <ul aria-label="Social Media Navigation">
           <li>

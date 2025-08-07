@@ -73,7 +73,12 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
+.video-player-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 800px;
+  padding: var(--space-m);
+}
 .drk-orange {
   color: var(--color-orange-drk);
 }
