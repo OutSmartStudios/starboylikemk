@@ -21,9 +21,9 @@ export default function Home() {
           <p className="track">4 Nyc<span className="lt">Girl</span>&nbsp;</p>
         </div>
         <div className="artwork">
-          <Image src="/images/ep-cover.jpg" alt="Album Artwork" layout="responsive"
-        width={700}   
-        height={475}   
+          <Image src='/images/cover.jpg' alt="Album Artwork" layout="responsive"
+        width={700}
+        height={475}
         sizes="(max-width: 768px) 100vw,
                (max-width: 1200px) 60vw,
                33vw"/>
