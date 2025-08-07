@@ -11,7 +11,6 @@ export default function Home() {
           <div className="album-info">
             <p>starboylikemk</p>
             <p>8 August 2025</p>
-            <p className="artist">pre save EP now</p>
           </div>
       </header>
       <main>
