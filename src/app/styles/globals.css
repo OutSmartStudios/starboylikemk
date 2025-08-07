@@ -1,7 +1,6 @@
 @import './_reset.css';
 @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400..700;1,400..700&display=swap');
 @font-face {
   font-family: 'Bringthanoize';
   src: url('/fonts/bring_tha_noize/Bringthanoize.woff2') format('woff2'),
@@ -13,28 +12,27 @@
 
 
 :root {
-  --color-main: #EC5701;
-  --color-text: #000000;
-  --color-ms-blue: #2358B8;
-  --color-ms-blue-lt: #659CC6;
+  --color-orange: #FF7A00;
+  --color-orange-drk: #EC5701;
+  --color-cream: #FFD8B3;
+  --color-cream-drk: #FFC794;
   --color-white: #ffffff;
-  --color-grey: #C6C8CD;
   ;
 
   --font-logo: 'Bringthanoize', sans-serif;
   --font-headings: "Archivo Black", sans-serif;
-  --font-base: "Instrument Sans", sans-serif;
+  --font-base: "Archivo Narrow", sans-serif;
 
-/* @link https://utopia.fyi/type/calculator?c=320,16,1.25,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
+/* @link https://utopia.fyi/type/calculator?c=320,12,1.25,1240,20,1.333,6,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
 
 
-  --step-0: clamp(1rem, 0.913rem + 0.4348vw, 1.25rem);
-  --step-1: clamp(1.25rem, 1.1052rem + 0.7239vw, 1.6663rem);
-  --step-2: clamp(1.5625rem, 1.3334rem + 1.1454vw, 2.2211rem);
-  --step-3: clamp(1.9531rem, 1.6026rem + 1.7524vw, 2.9607rem);
-  --step-4: clamp(2.4414rem, 1.9178rem + 2.6178vw, 3.9467rem);
-  --step-5: clamp(3.0518rem, 2.2834rem + 3.842vw, 5.2609rem);
-  --step-6: clamp(3.8147rem, 2.7023rem + 5.5619vw, 7.0128rem);
+  --step-0: clamp(0.75rem, 0.5761rem + 0.8696vw, 1.25rem);
+  --step-1: clamp(0.9375rem, 0.684rem + 1.2674vw, 1.6663rem);
+  --step-2: clamp(1.1719rem, 0.8069rem + 1.8248vw, 2.2211rem);
+  --step-3: clamp(1.4648rem, 0.9445rem + 2.6016vw, 2.9607rem);
+  --step-4: clamp(1.8311rem, 1.0952rem + 3.6793vw, 3.9467rem);
+  --step-5: clamp(2.2888rem, 1.255rem + 5.1689vw, 5.2609rem);
+  --step-6: clamp(2.661rem, 1.4169rem + 7.2205vw, 7.0128rem);
 
 
   /* @link https://utopia.fyi/space/calculator?c=320,16,1.2,1240,20,1.333,5,0,&s=0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12 */
@@ -62,50 +60,127 @@
 
 }
 
-.myspace-blue {
-  background-color: var(--color-ms-blue);
-}
-
-.myspace-blue-lt {
-  background-color:var(--color-ms-blue-lt)
-}
 
 html {
-  background-color: rgb(254, 254, 254);
+  background-color:var(--color-orange);
   min-height: 100%;
 }
 
 body {
   color: var(--color-text);
   font-family: var(--font-base);
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.drk-orange {
+  color: var(--color-orange-drk);
+}
+
+.cream {
+  color: var(--color-cream);
 }
 
 header {
   color: var(--color-white);
+  padding: var(--space-m);
 }
+.artwork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: var(--space-m);
+  
+}
+
 h1 {
-  padding: var(--space-s) 0;
-  font-size: var(--step-3);
+  font-size: var(--step-6);
+  font-family: var(--font-headings);
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: var(--space-s);
+
+  @media screen and (max-width: 600px) {
+    font-size: var(--step-5);
+    
+  }
 }
 
 h2 {
-  font-size: var(--step-1);
-}
-.ms-nav {
+  font-size: var(--step-4);
+  font-family: var(--font-headings);
+  font-weight: 300;
   text-align: center;
+  padding-bottom: var(--space-s);
+
+  @media screen and (max-width: 600px) {
+    font-size: var(--step-4);
+    
+  }
+}
+
+.album-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-headings);
   font-size: var(--step-0);
+  color: var(--color-cream);
 }
 
-/* .ms-nav ul li:not(:last-child)::after {
-  content:"|";
-} */
-
-.ms-nav-header {
-  font-weight: bold;
-  padding: var(--space-xs);
+.artist {
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
 }
 
+.tracklist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-cream-drk);
+  max-width: 1000px;
+}
+
+.track {
+  font-size: var(--step-5);
+  font-family: var(--font-base);
+  letter-spacing: -3px;
+  font-weight: 700;
+  line-height: 0.9;
+
+  @media screen and (max-width: 600px) {
+    font-size: var(--step-4);
+    letter-spacing: -2px;
+    
+  }
+}
+
+.lt {
+  font-weight: 200;
+}
+
+.szn {
+  filter: blur(2px);
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-bottom: var(--space-m);
+}
+
+ul {
+  list-style-type: none;
+  padding:0;
+  /* margin-bottom: var(--space-xs); */
+  display: flex;
+  gap: var(--space-xs-s);
+}
 
 .wrapper {
   margin-inline: auto;
@@ -113,59 +188,6 @@ h2 {
   padding-left: var(--gutter);
   padding-right: var(--gutter);
   position: relative;
-}
-
-
-
-.graffiti {
-  font-family: var(--font-logo);
-  color: var(--color-main);
-  font-size: var(--step-3);
-  letter-spacing: 3px;
-}
-
-.h2 {
-  font-family: var(--font-base);
-  text-align: center;
-  font-size: var(--step-4);
-  line-height: 0.9;
-  font-weight: 200;
-}
-
-a {
-  text-decoration: none;
-}
-
-a:active {
-  color: var(--color-main);
-}
-
-
-
-.latest-music p a {
-  color: var(--color-ms-blue);
-}
-
-
-.font-lt {
-  font-weight: 400;
-}
-
-.font-xl {
-  font-size: var(--step-6);
-  letter-spacing: -5px;
-}
-
-.font-xs {
-  font-size: var(--step-xs);
-}
-
-.button-wrapper {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  margin: var(--space-s);
-  gap: var(--space-s);
 }
 
 
@@ -187,14 +209,6 @@ a:active {
   margin-block-start: var(--flow-space, 1em);
 }
 
-.card {
-  padding: var(--space-l);
-  justify-self: center;
-}
-
-.top {
-  padding: var(--space-l);
-}
 .flex-center {
   display: flex;
   justify-content: center;
@@ -203,122 +217,3 @@ a:active {
 }
 
 
-
-.music-entry {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 0.4rem;
-}
-
-.music-entry h3 {
-  font-weight: 200;
- 
-}
-
-.margin-bottom {
-  margin-bottom: var(--space-m);
-}
-
-ul {
-  list-style-type: none;
-  padding:0;
-  margin-bottom: var(--space-xs);
-  display: flex;
-  gap: var(--space-xs-s);
-}
-
-
-.grey-container {
-  background-color: var(--color-grey);
-  border: 2px solid black;
-  padding: var(--space-s);
-  
-}
-
-.profile-section {
-  display: flex;
-  flex-direction: column;
-}
-
-
-.myspace-url {
-  color: var(--color-ms-blue);
-  font-weight: 600;
-}
-
-.myspace-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(4, auto);
-  column-gap: var(--space-s-2xl);
-  row-gap: var(--space-m);
-  margin: 2rem;
-}
-
-.container a {
-  display: flex;
-  align-items: center;
-  margin:0 0.2rem;
-}
-
-.container {
-  border: 2px solid black;
-}
-
-.div1 { 
-  grid-area: 1 / 1 / 2 / 3; 
-  order: 1;
-}
-.div2 { 
-  grid-area: 2 / 1 / 5 / 3;
-  order: 2
-}
-.div3 { 
-  grid-area: 5 / 1 / 7 / 3; 
-  order: 3;
-}
-.div4 { 
-  grid-area: 7 / 1 / 8 / 3;
-  order: 4;
-}
-.div5 { 
-  grid-area: 1 / 3 / 3 / 6; 
-  order: 5;
-  display: flex;
-}
-.div6 { 
-  grid-area: 3 / 3 / 5 / 6;
-  order: 6;
-  display: flex;
-  flex-direction: column;
-}
-.div7 { 
-  grid-area: 5 / 3 / 7 / 6;
-  order: 7;
-  max-width: 650px;  }
-.div8 { 
-  grid-area: 7 / 4 / 8 / 6; 
-  order: 8;
-  display: flex;
-  justify-content: flex-end;
-}
-
-@media (max-width: 786px)  {
-  .myspace-grid {
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, auto);
-    column-gap: var(--space-s-2xl);
-    row-gap: var(--space-m);
-    margin: 2rem;
-  }
-
-  .div5 {
-    order: 2;
-  }
-  .div8 {
-    justify-content: center;
-  }
-}
