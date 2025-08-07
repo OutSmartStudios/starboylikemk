@@ -22,8 +22,8 @@ export default function Home() {
         </div>
         <div className="artwork">
           <Image src="/images/ep-cover.jpg" alt="Album Artwork" layout="responsive"
-        width={700}    // native image width
-        height={475}   // native image height
+        width={700}   
+        height={475}   
         sizes="(max-width: 768px) 100vw,
                (max-width: 1200px) 60vw,
                33vw"/>
