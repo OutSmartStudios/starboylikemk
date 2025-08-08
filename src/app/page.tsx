@@ -1,5 +1,6 @@
 import Image from "next/image";
-// import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
+import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
             <p>8 August 2025</p>
           </div>
       </header>
-      <main>
+      <main className="flow">
         <div className="tracklist">
           <p className="track"><a href="#">1 CocaCrazy&nbsp;</a></p>
           <p className="track"><a href="#">2 Wats<span className="lt">Gwaaning</span>&nbsp;</a></p>
@@ -29,8 +30,9 @@ export default function Home() {
                33vw"/>
         </div>
         <h2 className="h1 cream">starboylike<span className="drk-orange szn">mk</span></h2>
-        {/* <p className="track">1 CocaCrazy&nbsp;</p> */}
-        {/* <VideoPlayer /> */}
+        <p className="video-name">CocaCrazy - Official Music Video</p>
+        <VideoPlayer />
+        <CountdownTimer />
       </main>
       <footer>
         

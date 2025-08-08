@@ -73,11 +73,23 @@ body {
   align-items: center;
   flex-direction: column;
 }
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, 1em);
+}
+
+main {
+  padding: var(--space-s);
+}
+
+footer {
+  padding: var(--space-s);
+}
 .video-player-container {
-  margin: 0 auto;
+  margin: var(--space-s) auto;
   width: 100%;
   max-width: 800px;
-  padding: var(--space-m);
+  border: 3px solid var(--color-cream);
 }
 .drk-orange {
   color: var(--color-orange-drk);
@@ -96,11 +108,11 @@ header {
   padding: var(--space-m);
 }
 .artwork {
+  --flow-space: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: var(--space-m);
-  
+
 }
 
 h1 {
@@ -123,9 +135,6 @@ h2 {
   font-family: var(--font-headings);
   font-weight: 300;
   text-align: center;
-  padding-bottom: var(--space-s);
-
-  
 }
 
 @media screen and (max-width: 600px) {
@@ -133,6 +142,8 @@ h2 {
     font-size: var(--step-4);
   }
   }
+
+
 .album-info {
   display: flex;
   justify-content: space-between;
@@ -142,10 +153,15 @@ h2 {
   color: var(--color-cream);
 }
 
-.artist {
-  @media screen and (max-width: 600px) {
-    display: none;
-  }
+
+.video-name {
+  font-size: var(--step-2);
+  font-family: var(--font-base);
+  font-weight: 700;
+  text-align: center;
+  color: var(--color-cream);
+  letter-spacing: -1px;
+  line-height: 1;
 }
 
 .tracklist {
@@ -156,6 +172,7 @@ h2 {
   color: var(--color-cream-drk);
   max-width: 1000px;
 }
+
 
 
 .track {
@@ -185,12 +202,24 @@ h2 {
   filter: blur(2px);
 }
 
+.countdown-timer {
+  --flow-space: 0em;
+
+  display: flex;
+  justify-content: center;
+  color: var(--color-cream);
+  font-size: var(--step-2);
+  font-family: var(--font-base);
+  letter-spacing: -1px;
+  font-weight: 600;
+}
+
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  padding-bottom: var(--space-m);
+  
 }
 
 ul {
@@ -234,9 +263,7 @@ ul li:hover {
   --grid-min-item-size: clamp(20rem, 40vw, 33rem);
 }
 
-.flow > * + * {
-  margin-block-start: var(--flow-space, 1em);
-}
+
 
 .flex-center {
   display: flex;
