@@ -1,6 +1,6 @@
 import Image from "next/image";
 import VideoPlayer from "./components/VideoPlayer/VideoPlayer";
-import CountdownTimer from "./components/CountdownTimer/CountdownTimer";
+
 
 
 export default function Home() {
@@ -32,7 +32,6 @@ export default function Home() {
         <h2 className="h1 cream">starboylike<span className="drk-orange szn">mk</span></h2>
         <p className="video-name">CocaCrazy - Official Music Video</p>
         <VideoPlayer />
-        <CountdownTimer />
       </main>
       <footer>
         
