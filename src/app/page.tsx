@@ -16,10 +16,10 @@ export default function Home() {
       </header>
       <main className="flow">
         <div className="tracklist">
-          <p className="track"><a href="#">1 CocaCrazy&nbsp;</a></p>
-          <p className="track"><a href="#">2 Wats<span className="lt">Gwaaning</span>&nbsp;</a></p>
-          <p className="track"><a href="#">3 Talk2MeGirl&nbsp;</a></p>
-          <p className="track"><a href="#">4 Nyc<span className="lt">Girl</span>&nbsp;</a></p>
+          <p className="track"><a href="https://open.spotify.com/track/0FWOM27yT6hI2K2lnjsMWC">1 CocaCrazy&nbsp;</a></p>
+          <p className="track"><a href="https://open.spotify.com/track/4dgVwV3XGrCyP1D4GPZl9e">2 Wats<span className="lt">Gwaaning</span>&nbsp;</a></p>
+          <p className="track"><a href="https://open.spotify.com/track/1trqaVnnKD493OJQcwA4yT">3 Talk2MeGirl&nbsp;</a></p>
+          <p className="track"><a href="https://open.spotify.com/track/2wFmLWWcjykzjL3NtUa9mH">4 Nyc<span className="lt">Girl</span>&nbsp;</a></p>
         </div>
         <div className="artwork">
           <Image src='/images/cover.jpg' alt="Album Artwork" layout="responsive"
