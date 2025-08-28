@@ -10,7 +10,7 @@ export default function VideoPlayer() {
     <div className="video-player-container">
         <div className="video-player" style={{ position: 'relative', paddingTop: '56.25%' /* 16:9 */ }}>
         <ReactPlayer
-            src='https://www.youtube.com/watch?v=Ztq8N772ClU'
+            src='https://www.youtube.com/watch?v=sL1JOqHIAG4'
             width="100%"
             height="100%"
             controls

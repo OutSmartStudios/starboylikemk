@@ -180,7 +180,7 @@ h2 {
   font-family: var(--font-base);
   letter-spacing: -3px;
   font-weight: 700;
-  line-height: 0.9;
+  line-height: 1;
 }
 
 .track a:hover {

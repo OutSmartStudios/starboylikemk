@@ -30,7 +30,7 @@ export default function Home() {
                33vw"/>
         </div>
         <h2 className="h1 cream">starboylike<span className="drk-orange szn">mk</span></h2>
-        <p className="video-name">CocaCrazy - Official Music Video</p>
+        <p className="video-name">Talk2MeGirl - Official Music Video</p>
         <VideoPlayer />
       </main>
       <footer>
